@@ -369,7 +369,7 @@ task.spawn(function()
 
     -- EXPOSE FUNCTIONS FOR UI
     _G.RayzHub = {
-        createPet = _G.Xeno_createPet,
+        createPet = _G.RayzHub_createPet,
         GetPetByName = function(name)
             local Loads = require(ReplicatedStorage.Fsys).load
             local InventoryDB = Loads("InventoryDB")
@@ -383,13 +383,13 @@ task.spawn(function()
     }
 end)
 
--- ✅ RAYFIELD UI (PET SPAWNER)
+-- ✅ RAYFIELD UI (YouTube + Pets Only)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "🔥 Forgiveness | Adopt Me",
+    Name = "🔥Xeno Hub | Adopt Me",
     LoadingTitle = "Loading Pet Spawner...",
     LoadingSubtitle = "by xeno",
-    ConfigurationSaving = {Enabled = true, FolderName = "xeno-script"},
+    ConfigurationSaving = {Enabled = true, FolderName = "XenoHubAdoptMe"},
     KeySystem = false
 })
 
