@@ -4,36 +4,11 @@
 repeat task.wait() until game:IsLoaded()
 
 ---------------------------------------------------
--- 🚨 ADOPT ME | TRADING LICENSE CHECK 🔐
+-- 🧰 SERVICES
 ---------------------------------------------------
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
-
-local hasLicense = false
-
-local ok, result = pcall(function()
-    local TradeHelper = require(
-        ReplicatedStorage:WaitForChild("SharedModules")
-            :WaitForChild("TradeLicenseHelper")
-    )
-    return TradeHelper.player_has_trade_license()
-end)
-
-if ok and result == true then
-    hasLicense = true
-end
-
-if not hasLicense then
-    LocalPlayer:Kick(
-        " Alt Account Detected  Please use your MAIN account  Trading License required"
-    )
-    return
-end
-
----------------------------------------------------
--- 🧰 SERVICES
----------------------------------------------------
 local VirtualUser = game:GetService("VirtualUser")
 local RunService = game:GetService("RunService")
 
@@ -118,26 +93,26 @@ local function findRedCircle()
 end
 
 ---------------------------------------------------
--- ⚡ LOAD RAYFIELD UI
+-- ⚡ LOAD RAYFIELD UI (CID PANEL BRANDING)
 ---------------------------------------------------
 local Rayfield = loadstring(game:HttpGet(
     "https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua"
 ))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "🧊 Xeno Hub | Adopt Me",
-    LoadingTitle = "❄️ Forgiveness",
-    LoadingSubtitle = "🍪 Winter Gingerbread",
+    Name = "🏆 CID PANEL | Premium",
+    LoadingTitle = "⚡ CID PANEL",
+    LoadingSubtitle = "The Fastest Script Utility",
     ConfigurationSaving = {
         Enabled = true,
-        FolderName = "forgiveness",
-        FileName = "AdoptMe"
+        FolderName = "CID_Panel",
+        FileName = "AdoptMe_Config"
     },
     KeySystem = false
 })
 
 local MainTab = Window:CreateTab("🏠 Main", 4483362458)
-MainTab:CreateSection("📊 Status")
+MainTab:CreateSection("📊 Performance Status")
 
 local StatusLabel = MainTab:CreateLabel("🍪 Collected: 0")
 
@@ -228,7 +203,7 @@ end)
 -- ✅ READY
 ---------------------------------------------------
 Rayfield:Notify({
-    Title = "✅ SCRIPT LOADED",
-    Content = "🍪 Auto Gingerbread Farming Enabled",
-    Duration = 4
+    Title = "✅ CID PANEL LOADED",
+    Content = "Premium Interface Ready for Use",
+    Duration = 5
 })
