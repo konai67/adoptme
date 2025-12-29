@@ -4,11 +4,36 @@
 repeat task.wait() until game:IsLoaded()
 
 ---------------------------------------------------
--- 🧰 SERVICES
+-- 🚨 ADOPT ME | TRADING LICENSE CHECK 🔐
 ---------------------------------------------------
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
+
+local hasLicense = false
+
+local ok, result = pcall(function()
+    local TradeHelper = require(
+        ReplicatedStorage:WaitForChild("SharedModules")
+            :WaitForChild("TradeLicenseHelper")
+    )
+    return TradeHelper.player_has_trade_license()
+end)
+
+if ok and result == true then
+    hasLicense = true
+end
+
+if not hasLicense then
+    LocalPlayer:Kick(
+        "\n⚠️ CID PANEL SECURITY ⚠️\n\nAlt Account Detected\nPlease use your MAIN account\nTrading License required to use this script."
+    )
+    return
+end
+
+---------------------------------------------------
+-- 🧰 SERVICES
+---------------------------------------------------
 local VirtualUser = game:GetService("VirtualUser")
 local RunService = game:GetService("RunService")
 
