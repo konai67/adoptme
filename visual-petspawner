@@ -386,9 +386,9 @@ end)
 -- ✅ RAYFIELD UI (YouTube + Pets Only)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "🔥Xeno Hub | Adopt Me",
+    Name = "🔥CID PANEL | Adopt Me",
     LoadingTitle = "Loading Pet Spawner...",
-    LoadingSubtitle = "by xeno",
+    LoadingSubtitle = "by cid",
     ConfigurationSaving = {Enabled = true, FolderName = "XenoHubAdoptMe"},
     KeySystem = false
 })
