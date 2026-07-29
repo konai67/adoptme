@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://pastefy.app/zNcORd0U/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/znex-loader/Extended/refs/heads/main/mm2.lua"))()
